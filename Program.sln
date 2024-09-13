@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Program", "Program\Program.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "class1th (GetAsynckeyState)", "class1th (GetAsynckeyStete)\class1th (GetAsynckeyStete).vcxproj", "{3100F7C5-DD7A-4BDF-97C5-CA3632E388D6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "class2th (Double buffering)", "class2th (Double buffering)\class2th (Double buffering).vcxproj", "{811D3644-EA78-435C-AE22-2E66B757A882}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{3100F7C5-DD7A-4BDF-97C5-CA3632E388D6}.Release|x64.Build.0 = Release|x64
 		{3100F7C5-DD7A-4BDF-97C5-CA3632E388D6}.Release|x86.ActiveCfg = Release|Win32
 		{3100F7C5-DD7A-4BDF-97C5-CA3632E388D6}.Release|x86.Build.0 = Release|Win32
+		{811D3644-EA78-435C-AE22-2E66B757A882}.Debug|x64.ActiveCfg = Debug|x64
+		{811D3644-EA78-435C-AE22-2E66B757A882}.Debug|x64.Build.0 = Debug|x64
+		{811D3644-EA78-435C-AE22-2E66B757A882}.Debug|x86.ActiveCfg = Debug|Win32
+		{811D3644-EA78-435C-AE22-2E66B757A882}.Debug|x86.Build.0 = Debug|Win32
+		{811D3644-EA78-435C-AE22-2E66B757A882}.Release|x64.ActiveCfg = Release|x64
+		{811D3644-EA78-435C-AE22-2E66B757A882}.Release|x64.Build.0 = Release|x64
+		{811D3644-EA78-435C-AE22-2E66B757A882}.Release|x86.ActiveCfg = Release|Win32
+		{811D3644-EA78-435C-AE22-2E66B757A882}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

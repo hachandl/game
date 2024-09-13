@@ -117,6 +117,7 @@ int main()
 		Render(x, y, "¡Ù");
 	}
 	
+	Release();
 
 		//Position(10, 10);
 		//printf("¡Ù");
