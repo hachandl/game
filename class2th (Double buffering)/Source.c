@@ -33,50 +33,9 @@ char maze[HEIGHT][WIDTH] ={
 };
 void Position(int x, int y)
 {
-	// x와 y축을 설정하는 구조체
 	COORD position = { x, y };
 
-	//콘솔 커서의 좌표를 설정하는 함수
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), position);
-}
-
-void player()
-{
-	char key = 0;
-	int x = -2, y = 1;
-
-	while (1)
-	{
-		key = _getch();
-
-		if (key == -32)
-		{
-			key = _getch();
-		}
-
-		switch (key)
-		{
-		case UP: //printf("UP\n");
-			y -= 1;
-			break;
-
-		case DOWN: //printf("DOWN\n");
-			y += 1;
-			break;
-
-		case LEFT: //printf("LEFT\n");
-			x -= 2;
-			break;
-
-		case RIGHT: //printf("RIGHT\n");
-			x += 2;
-			break;
-		default: //printf("Exception\n");
-			break;
-		}
-		Position(x, y);
-		printf("☆");
-	}
 }
 void Render()
 	{
@@ -104,10 +63,67 @@ void Render()
 
 int main()
 {
-	Character character = {1,1,"★"};
+	Character character = { 0,1,"★" };
+
+	char key = 0;
 
 	Render();
-	player();
+
+	while (1)
+	{
+		if (_kbhit())
+		{
+			key = _getch();
+
+			if (key == -32)
+			{
+				key = _getch();
+			}
+
+			switch (key)
+			{
+			case UP: 
+				if (maze[character.y - 1][character.x / 2] != '1')
+				{
+					character.y -= 1;
+				}
+					break;
+				
+			case DOWN: 
+				if (maze[character.y + 1][character.x / 2] != '1')
+				{
+					character.y += 1;
+				}
+					break;
+				
+			case LEFT: 
+				if (maze[character.y][character.x / 2 - 1] != '1')
+				{
+					character.x -= 2;
+				}
+					break;
+				
+			case RIGHT: 
+				if (maze[character.y][character.x / 2 + 1] != '1')
+				{
+					character.x += 2;
+				}
+					break;
+			}
+
+	
+
+			system("cls");
+			Render();
+		}
+
+		
+
+		Position(character.x, character.y);
+		printf("%s", character.shape);
+
+	}
+
 
 	return 0;
 }
